@@ -162,7 +162,7 @@ class PlannerTester(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    planner_name = 'navfn'
+    planner_name = 'navfn_A*'
 
     tester = PlannerTester(planner_type=planner_name)
     tester.navigator.waitUntilNav2Active()
@@ -173,7 +173,9 @@ def main(args=None):
 
     x_goal = 2.22
     y_goal = 6.36
-    
+
+    # x_goal = 5.48
+    # y_goal = 11.06
 
     #tester.get_logger().info("Getting path...")
     tester.send_and_measure(x_goal, y_goal)
