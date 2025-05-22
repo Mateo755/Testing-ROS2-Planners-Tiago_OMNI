@@ -1,0 +1,2 @@
+planner,goal_x,goal_y,planning_time_sec,path_length_m,path_cost_global,cost_min,cost_max,cost_std,path_turning_complexity
+navfn,-11.46,2.43,0.0747,11.8717,0,0,0,0.0,10.1399
