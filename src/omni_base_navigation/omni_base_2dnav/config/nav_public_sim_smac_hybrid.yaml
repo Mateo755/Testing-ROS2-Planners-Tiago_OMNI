@@ -325,13 +325,61 @@ planner_server:
   ros__parameters:
     expected_planner_frequency: 20.0
     use_sim_time: true
-    planner_plugins: ["GridBased"]
-    smac_hybrid:
-      plugin: "nav2_smac_planner/SmacPlannerHybrid"
-      tolerance: 0.5
+    planner_plugins: ["SmacPlannerHybrid"]
+    SmacPlannerHybrid:
+      plugin: nav2_smac_planner/SmacPlannerHybrid
+      downsample_costmap: false
+      downsampling_factor: 1
+
+      # Tolerancja celu
+      tolerance: 0.25
       allow_unknown: true
+
+      # Czas i iteracje
+      max_iterations: 1000000
+      max_on_approach_iterations: 1000
+      max_planning_time: 5.0
+      terminal_checking_interval: 5000
+
+      # Model ruchu 
+      motion_model_for_search: "REEDS_SHEPP"
+      angle_quantization_bins: 72
+      minimum_turning_radius: 0.4  # Brak ograniczeń
+
+      # Kary
+      reverse_penalty: 1.0
+      change_penalty: 0.0
+      non_straight_penalty: 1.0
+      cost_penalty: 2.0
+      retrospective_penalty: 0.015
+
+      # Rozszerzenia analityczne
+      analytic_expansion_ratio: 3.0
+      analytic_expansion_max_length: 3.0
+      analytic_expansion_max_cost: 200.0
+      analytic_expansion_max_cost_override: true
+
+      # Heurystyki i wydajność
+      lookup_table_size: 20.0
+      cache_obstacle_heuristic: true
+      downsample_obstacle_heuristic: true
+
+      # Orientacja końcowa
+      goal_heading_mode: "ALL_DIRECTION"
+      coarse_search_resolution: 4
+
+      # Wygładzanie ścieżki
       smooth_path: true
-      motion_model_for_search: "OMNI"
+      smoother:
+        max_iterations: 1000
+        w_smooth: 0.3
+        w_data: 0.2
+        tolerance: 1.0e-10
+        do_refinement: true
+        refinement_num: 2
+
+      # Debug
+      debug_visualizations: false
 
 slam_toolbox:
   ros__parameters:

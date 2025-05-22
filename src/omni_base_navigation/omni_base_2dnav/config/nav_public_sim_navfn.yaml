@@ -325,11 +325,11 @@ planner_server:
   ros__parameters:
     expected_planner_frequency: 20.0
     use_sim_time: true
-    planner_plugins: ["GridBased"]
-    navfn:
+    planner_plugins: ["NavFn"]
+    NavFn:
       plugin: "nav2_navfn_planner/NavfnPlanner"
       tolerance: 0.5                            # Dopuszczalna odległość celu, jeśli nieosiągalny
-      use_astar: true                           # Zamiast Dijkstry używa A*
+      use_astar: false                          # Zamiast Dijkstry używa A*
       allow_unknown: true                       # Czy pozwala planować przez nieznane komórki
       #use_final_approach_orientation: true     # Czy obraca robota do celu w końcowej pozycji
 

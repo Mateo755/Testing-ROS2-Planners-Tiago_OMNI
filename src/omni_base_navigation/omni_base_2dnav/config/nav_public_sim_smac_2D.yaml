@@ -325,13 +325,28 @@ planner_server:
   ros__parameters:
     expected_planner_frequency: 20.0
     use_sim_time: true
-    planner_plugins: ["GridBased"]
-    smac_2d:
+    planner_plugins: ["SmacPlanner2D"]
+
+    SmacPlanner2D:
       plugin: "nav2_smac_planner/SmacPlanner2D"
-      tolerance: 0.5
+
+      tolerance: 0.125
+      downsample_costmap: false
+      downsampling_factor: 1
       allow_unknown: true
-      smooth_path: true
-      motion_model_for_search: "OMNI"
+
+      max_iterations: 1000000
+      max_on_approach_iterations: 1000
+      max_planning_time: 2.0
+
+      cost_travel_multiplier: 2.0
+      use_final_approach_orientation: false
+
+      smoother:
+        max_iterations: 1000
+        w_smooth: 0.3
+        w_data: 0.2
+        tolerance: 1.0e-10
 
 slam_toolbox:
   ros__parameters:

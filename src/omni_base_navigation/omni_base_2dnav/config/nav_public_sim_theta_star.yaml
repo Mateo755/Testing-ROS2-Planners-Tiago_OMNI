@@ -325,11 +325,17 @@ planner_server:
   ros__parameters:
     expected_planner_frequency: 20.0
     use_sim_time: true
-    planner_plugins: ["GridBased"]
-    theta_star:
+    planner_plugins: ["ThetaStar"]
+
+    ThetaStar:
       plugin: "nav2_theta_star_planner/ThetaStarPlanner"
-      allow_unknown: true
-      how_many_corners: 8
+
+      how_many_corners: 8                     # 4 lub 8 są typowe (8 = większa swoboda)
+      w_euc_cost: 1.0                         # Waga dystansu euklidesowego
+      w_traversal_cost: 2.0                   # Kara za wchodzenie w obszary o wysokim koszcie
+      w_heuristic_cost: 1.0                   # Waga heurystyki A* (czyli priorytet skracania drogi)
+      use_final_approach_orientation: false   # czy obrócić robota do końcowej orientacji
+      allow_unknown: true                     # czy planować przez nieznane
 
 
 slam_toolbox:
