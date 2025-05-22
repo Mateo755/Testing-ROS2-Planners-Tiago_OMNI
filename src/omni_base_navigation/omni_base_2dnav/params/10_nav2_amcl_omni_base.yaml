@@ -1,0 +1,4 @@
+/amcl:
+  use_preset: "amcl_omni.yaml"
+  use_if:
+    base_type: omni_base

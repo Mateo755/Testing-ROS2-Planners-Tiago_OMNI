@@ -1,0 +1,14 @@
+/lifecycle_manager_laser:
+  use_preset: "lifecycle_manager.yaml"
+  use_if:
+    base_type: omni_base
+    laser_model: sick-571
+  ros__parameters:
+    node_names:
+      [
+        "front_laser",
+        "rear_laser",
+        "laserscan_multi_merger",
+        "pal_laser_filters",
+        "direct_laser_odometry",
+      ]

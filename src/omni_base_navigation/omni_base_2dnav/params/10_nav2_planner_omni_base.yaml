@@ -1,0 +1,4 @@
+/global_costmap:
+  use_preset: "global_costmap_mppi.yaml"
+  use_if:
+    base_type: omni_base

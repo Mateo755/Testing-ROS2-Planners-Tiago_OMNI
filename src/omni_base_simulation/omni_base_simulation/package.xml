@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>omni_base_simulation</name>
+  <version>2.8.0</version>
+  <description>The omni_base_simulation package</description>
+  <author email="yue.erro@pal-robotics.com">Yue Erro</author>
+  <author email="andrea.capodacqua@pal-robotics.com">Andrea Capodacqua</author>
+  <maintainer email="andrea.capodacqua@pal-robotics.com">Andrea Capodacqua</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+
+  <exec_depend>omni_base_gazebo</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>

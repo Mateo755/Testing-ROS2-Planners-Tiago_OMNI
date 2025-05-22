@@ -1,0 +1,19 @@
+/rear_laser:
+  use_preset: "sick_driver.yaml"
+  use_if:
+    base_type: omni_base
+    laser_model: sick-571
+  ros__parameters:
+    serial_number: ${serial_number_laser_0}
+    scan_topic: "/scan_rear_raw"
+    frame_id: "base_rear_laser_link"
+
+/front_laser:
+  use_preset: "sick_driver.yaml"
+  use_if:
+    base_type: omni_base
+    laser_model: sick-571
+  ros__parameters:
+    serial_number: ${serial_number_laser_1}
+    scan_topic: "/scan_front_raw"
+    frame_id: "base_front_laser_link"

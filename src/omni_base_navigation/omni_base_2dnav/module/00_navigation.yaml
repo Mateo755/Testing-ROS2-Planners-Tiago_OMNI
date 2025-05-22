@@ -1,0 +1,2 @@
+navigation:
+  launch: "omni_base_2dnav navigation.launch.py"

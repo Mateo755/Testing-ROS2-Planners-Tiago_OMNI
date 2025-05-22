@@ -1,0 +1,11 @@
+/lifecycle_manager_laser_sim:
+  use_preset: "lifecycle_manager.yaml"
+  use_if:
+    base_type: omni_base
+  ros__parameters:
+    node_names:
+      [
+        "laserscan_multi_merger",
+        "pal_laser_filters",
+        "direct_laser_odometry",
+      ]

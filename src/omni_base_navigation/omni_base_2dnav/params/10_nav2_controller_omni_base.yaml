@@ -1,0 +1,11 @@
+/controller_server:
+  use_preset: "mppi_omni.yaml"
+  use_if:
+    base_type: omni_base
+
+/local_costmap:
+  use_preset: "local_costmap_mppi.yaml"
+  use_if:
+    base_type: omni_base
+  ros__parameters:
+    footprint: "[[0.35, 0.24], [-0.35, 0.24], [-0.35, -0.24], [0.35, -0.24]]"

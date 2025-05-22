@@ -1,0 +1,21 @@
+/rear_laser:
+  use_preset: "hokuyo_driver.yaml"
+  use_if:
+    base_type: omni_base
+    laser_model: hokuyo
+  ros__parameters:
+    serial_port: /dev/ttyACM${serial_number_laser_0}
+    laser_frame_id: "base_rear_laser_link"
+  remappings:
+    scan: "/scan_rear_raw"
+
+/front_laser:
+  use_preset: "hokuyo_driver.yaml"
+  use_if:
+    base_type: omni_base
+    laser_model: hokuyo
+  ros__parameters:
+    serial_port: /dev/ttyACM${serial_number_laser_1}
+    laser_frame_id: "base_front_laser_link"
+  remappings:
+    scan: "/scan_front_raw"

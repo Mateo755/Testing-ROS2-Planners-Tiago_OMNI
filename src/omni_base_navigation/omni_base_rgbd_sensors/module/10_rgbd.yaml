@@ -1,0 +1,2 @@
+rgbd:
+  launch: "omni_base_rgbd_sensors rgbd_@add_on_module@_@camera_model@.launch.py"

@@ -1,0 +1,12 @@
+/lifecycle_manager_laser:
+  use_preset: "lifecycle_manager.yaml"
+  use_if:
+    base_type: omni_base
+    laser_model: hokuyo
+  ros__parameters:
+    node_names:
+      [
+        "laserscan_multi_merger",
+        "pal_laser_filters",
+        "direct_laser_odometry",
+      ]

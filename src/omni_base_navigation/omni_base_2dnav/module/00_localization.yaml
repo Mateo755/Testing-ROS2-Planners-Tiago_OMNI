@@ -1,0 +1,2 @@
+localization:
+  launch: "omni_base_2dnav localization.launch.py"

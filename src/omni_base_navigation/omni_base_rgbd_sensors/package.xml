@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>omni_base_rgbd_sensors</name>
+  <version>2.15.0</version>
+  <description>omni_base-specific RGBD sensors module and params files.</description>
+  <author email="andrea.capodacqua@pal-robotics.com">Andrea Capodacqua</author>
+  <maintainer email="andrea.capodacqua@pal-robotics.com">Andrea Capodacqua</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+
+  <build_depend condition="$PAL_DISTRO >= alum">pal_module_cmake</build_depend>
+  <build_depend condition="$PAL_DISTRO >= alum">pal_configuration_cmake</build_depend>
+  
+  <exec_depend condition="$PAL_DISTRO >= alum">depth_image_proc</exec_depend>
+  <exec_depend condition="$PAL_DISTRO >= alum">openni2_camera</exec_depend>
+  <exec_depend condition="$PAL_DISTRO >= alum">rclcpp_components</exec_depend>
+  <exec_depend condition="$PAL_DISTRO >= alum">realsense2_camera</exec_depend>
+  <exec_depend condition="$PAL_DISTRO >= alum">realsense_camera_cfg</exec_depend>
+  <exec_depend condition="$PAL_DISTRO >= alum">ros2launch</exec_depend>
+  <exec_depend condition="$PAL_DISTRO >= alum">structure_camera_cfg</exec_depend>  
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
