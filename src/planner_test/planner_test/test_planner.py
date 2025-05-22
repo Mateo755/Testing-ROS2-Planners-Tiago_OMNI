@@ -14,7 +14,7 @@ class PlannerTester(Node):
         self.navigator = BasicNavigator()
         self.planner_name = planner_type  
         self.results = []
-        self.path_dir = '/home/mateusz/ROS2/omni_base_public_ws/data'
+        self.path_dir = 'data'
 
     def compute_path_length(self, path):
         length = 0.0
