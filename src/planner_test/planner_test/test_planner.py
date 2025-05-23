@@ -121,7 +121,7 @@ class PlannerTester(Node):
         try:
             global_costmap = self.navigator.getGlobalCostmap()
             avg_cost, min_cost, max_cost, std_cost = self.compute_path_cost(path, global_costmap)
-            self.get_logger().info(f"Costmap size: {len(global_costmap.data)}, max: {max(global_costmap.data)}, min: {min(global_costmap.data)}")
+            #self.get_logger().info(f"Costmap size: {len(global_costmap.data)}, max: {max(global_costmap.data)}, min: {min(global_costmap.data)}")
         except Exception as e:
             self.get_logger().warn(f"Global costmap unavailable: {e}")
             avg_cost = min_cost = max_cost = std_cost = None
