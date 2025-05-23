@@ -1,0 +1,2 @@
+planner,goal_x,goal_y,planning_time_sec,path_length_m,path_cost_global,cost_min,cost_max,cost_std,path_turning_complexity
+smac_hybrid,5.48,11.06,0.7224,16.1678,24.61,0,206,56.2,7.9018
