@@ -64,8 +64,53 @@ Po zakończeniu działania testu planera powinny pojawić się komunikaty potwie
 [INFO] [1747958544.094518251] [planner_tester]: Wyniki zapisane do: data/results_navfn_A*_2.22_6.36.csv
 ```
 
+## 📊 Wizualizacja ścieżek – `path_plotting.py`
+
+Do wizualizacji ścieżek wygenerowanych przez różne planery można użyć skryptu `path_plotting.py`. Skrypt tworzy wykresy porównujące trajektorie dla zadanych punktów docelowych.
+
+### Uruchomienie:
+
+Upewnij się, że znajdujesz się w głównym katalogu przestrzeni roboczej `~/Testing-ROS2-Planners-Tiago_OMNI`, a następnie wykonaj:
+
+```bash
+python3 path_plotting.py
+```
+
+### Co uzyskujemy:
+
+* Wykres przedstawiający ścieżki wygenerowane przez różne planery dla jednego punktu docelowego.
+* Zaznaczone pozycje startowe (0,0) oraz cel.
+* Plik graficzny PNG zapisany w katalogu danego planu, np. `data/planners_compare/plan_-11.46_2.43/plot_-11.46_2.43.png`.
+
+Przykład wygenerowanego wykresu:
+
+<img src="data/planners_compare/plan_2.22_6.36/plot_2.22_6.36.png" alt="Trajektorie" width="60%"/>
+
+Skrypt korzysta z danych CSV wygenerowanych przez testy planera i automatycznie wykrywa dostępne ścieżki do porównania.
+
 ## ℹ️ Uwaga
 
 Wersja publiczna może nie zawierać `omni_drive_controller` — jest to oczekiwane w otwartym środowisku symulacyjnym.
 
 Dodatkowe światy symulacyjne (np. korytarze) można uruchamiać przez parametr `world:=<nazwa_świata>`.
+
+## 📁 Pliki dokumentacyjne
+
+```
+.
+├── nav2_planners_documentation.md       # Opis planerów dostępnych w Nav2
+├── planners_config_info.md              # Linki do dokumentacji parametrów planerów
+├── planners_testing_setup.md            # Instrukcja uruchomienia i testowania planerów
+├── requirements.txt                     # Lista zależności (m.in. matplotlib, pandas)
+├── 🚩 **results_planners_testing.md**   # GŁÓWNY RAPORT: wyniki testów plannerów
+```
+
+**RAPORT z przeprowadzonych testów planerów:**
+**[`results_planners_testing.md`](./results_planners_testing.md)** zawiera:
+
+* Czas planowania, długość trasy, koszty i złożoność skrętów
+* Tabele porównawcze dla kilku punktów docelowych
+* Wizualizacje trajektorii w różnych planerach
+* Rekomendacje dotyczące doboru planera do typu robota
+
+
