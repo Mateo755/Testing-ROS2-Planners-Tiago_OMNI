@@ -1,0 +1,2 @@
+planner,goal_x,goal_y,planning_time_sec,path_length_m,path_cost_global,cost_min,cost_max,cost_std,path_turning_complexity
+theta_star,5.48,11.06,0.1176,16.0518,15.75,0,170,44.57,10.6622

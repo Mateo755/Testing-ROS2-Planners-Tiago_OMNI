@@ -1,0 +1,2 @@
+planner,goal_x,goal_y,planning_time_sec,path_length_m,path_cost_global,cost_min,cost_max,cost_std,path_turning_complexity
+smac_lattice,5.48,11.06,1.1872,19.3695,4.91,0,121,22.85,6.9008
