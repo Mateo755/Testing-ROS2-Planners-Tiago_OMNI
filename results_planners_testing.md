@@ -67,18 +67,18 @@ W poniższych wykresach przedstawiono ścieżki wygenerowane przez różne plane
 
 ### ✅ Długość ścieżki
 
-* Najkrótsze trasy: `theta_star`, `smac_lattice`
+* Najkrótsze trasy: `theta_star`, `navfn (D.)`
 * Najdłuższe: `navfn_A*` (do 19.86 m w Teście 3)
 
 ### ✅ Koszt globalny ścieżki
 
 * Najniższy: `smac_lattice` (nawet 4.91 w Teście 3)
-* Najwyższy: `theta_star`, `navfn_dijkstra` (do 75.41)
+* Najwyższy: `theta_star`, `smac_hybrid` (do 75.41)
 
 ### ✅ Złożoność trajektorii (skręty)
 
 * **Najbardziej naturalne ścieżki**: `theta_star`, `smac_lattice`
-* **Najbardziej pokręcone**: `navfn_A*` (do 127 rad)
+* **Najbardziej nienaturalne**: `navfn_A*` (do 127 rad)
 
 ---
 
@@ -90,7 +90,7 @@ W poniższych wykresach przedstawiono ścieżki wygenerowane przez różne plane
 | **NavFn D.**     | ✅ szybki, ❌ dłuższe trasy, ❌ nieoptymalny koszt                                 |
 | **Theta\***      | ✅ krótka i gładka ścieżka, ✅ niski czas, ⚠️ możliwe wyższe koszty               |
 | **Smac Hybrid**  | ❌ wolny, ✅ dobra jakość trasy, ✅ zgodność z orientacją                          |
-| **Smac Lattice** | ✅ najkrótsze trasy, ✅ niski koszt, ❌ wolniejszy, ✅ bardzo naturalna trajektoria |
+| **Smac Lattice** | ✅ niski koszt, ❌ wolniejszy, ✅ bardzo naturalna trajektoria |
 
 ---
 
